@@ -9,4 +9,7 @@ class TemplateController extends Controller
     public function index(){
         return view('frontend.home');
     }
+    public function serves(){
+        return view('frontend.serves');
+    }
 }

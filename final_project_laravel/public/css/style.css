@@ -125,10 +125,16 @@ button.btn-secondary:hover{
 .services-bar h1{
 	font-weight: 600;
 	font-size: 24px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	
 }
 .services-bar .card{
 	box-shadow: 3px 5px 15px rgba(0,0,0, .15);
 	border: none;
+	
 }
 .services-bar .card h4.card-header{
 	background-color: #4e3914;

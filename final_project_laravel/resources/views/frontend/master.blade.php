@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>N & LW Lawn Care - Landscaping Bootstrap4 HTML5 Responsive Template </title>
+	<title>Isra3 shajarah  </title>
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Fontawesome CSS -->
@@ -26,15 +26,15 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                     <a class="nav-link active" href="index.html">Home</a>
+                     <a class="nav-link active" href="{{ route('home') }}">Home</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="about.html">About</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="services.html">Services</a>
+                     <a class="nav-link" href="{{ route('serves') }}">Services</a>
                   </li>
-                  <li class="nav-item dropdown">
+                  <!--<li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Portfolio
                      </a>
@@ -45,7 +45,7 @@
                         <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
                         <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
                      </div>
-                  </li>
+                  </li>-->
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Blog
