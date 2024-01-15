@@ -1,7 +1,5 @@
-@extends('frontend.master')
-
-@section('Navigation')
-
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+   
 
 <div class="container">
     <a class="navbar-brand" href="index.html">
@@ -59,4 +57,4 @@
        </ul>
     </div>
 </div>
-@endsection
+</nav>
