@@ -12,4 +12,10 @@ class TemplateController extends Controller
     public function serves(){
         return view('frontend.serves');
     }
+    public function admin(){
+        return view('admindashboard');
+    }
+    public function table(){
+        return view('table');
+    }
 }

@@ -19,7 +19,7 @@
           <li class="nav-item">
              <a class="nav-link" href="services.html">Services</a>
           </li>
-          <li class="nav-item dropdown">
+          <!--<li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              Portfolio
              </a>
@@ -30,8 +30,8 @@
                 <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
              </div>
-          </li>
-          <li class="nav-item dropdown">
+          </li>-->
+          <!--<li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              Blog
              </a>
@@ -40,16 +40,15 @@
                 <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
                 <a class="dropdown-item" href="blog-post.html">Blog Post</a>
              </div>
-          </li>
+          </li>-->
           <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Pages
+             register
              </a>
              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-                <a class="dropdown-item" href="404.html">404</a>
-                <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-             </div>
+                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                <a class="dropdown-item" href="{{ route('register') }}">Signup</a>
+                </div>
           </li>
           <li class="nav-item">
              <a class="nav-link" href="contact.html">Contact</a>

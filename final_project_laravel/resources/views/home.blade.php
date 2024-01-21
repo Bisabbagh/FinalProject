@@ -15,7 +15,7 @@
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active" style="background-image: url('images/slider-01.jpg')">
              <div class="carousel-caption d-none d-md-block">
-                <h3>Welcome to N & LW Lawn Care</h3>
+                <h3>Welcome to Izra3 shajarah</h3>
                 <p>A Great Theme For Garden Lawn Care</p>
              </div>
           </div>
@@ -51,17 +51,17 @@
 @section('content')
 <div class="container">
     <div class="services-bar">
-        <h1 class="my-4">Our Best Services </h1>
+        <h1 class="my-4">Your Points </h1>
         <!-- Services Section -->
         <div class="row">
            <div class="col-lg-4 mb-4">
               <div class="card h-100">
-                 <h4 class="card-header">Garden Fence</h4>
+                 <h4 class="card-header">Recharge cart</h4>
                  <div class="card-img">
                     <img class="img-fluid" src="images/services-img-01.jpg" alt="" />
                  </div>
                  <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    <p class="card-text">This gift contain a recharge cart of 1JD.</p>
                  </div>
                  <div class="card-footer">
                     <a href="#" class="btn btn-primary">Learn More</a>
