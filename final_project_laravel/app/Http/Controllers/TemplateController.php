@@ -16,6 +16,6 @@ class TemplateController extends Controller
         return view('admindashboard');
     }
     public function table(){
-        return view('table');
+        return view('points.view');
     }
 }

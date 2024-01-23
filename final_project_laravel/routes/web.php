@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PointController;
 use App\Http\Controllers\TemplateController;
+use App\Models\Point;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +21,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [TemplateController::class,'index'])->name('home');
 
 Route::get('/serves', [TemplateController::class,'serves'])->name('serves');
-Route::get('/lets', [TemplateController::class,'admin'])->name('admin');
+Route::get('/lstsss', [TemplateController::class,'admin'])->name('admin');
 Route::get('/table', [TemplateController::class,'table'])->name('table');
-
+Route::get('/tablecp', [PointController::class,'create'])->name('createpoint');
+Route::get('/editpoint{point}', [PointController::class,'edit'])->name('editpoint');
+Route::post('/points/view', [PointController::class,'store'])->name('storepoints');
+Route::get('/view', [PointController::class,'view'])->name('pointview');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

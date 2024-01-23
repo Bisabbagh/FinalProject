@@ -102,7 +102,7 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('table') }}">
+        <a class="nav-link" href="{{ route('pointview') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
     </li>
