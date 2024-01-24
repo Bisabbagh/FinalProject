@@ -51,7 +51,7 @@
 @section('content')
 <div class="container">
     <div class="services-bar">
-        <h1 class="my-4">Your Points </h1>
+        <h1 class="my-4">Your Points:  </h1>
         <!-- Services Section -->
         <div class="row">
            <div class="col-lg-4 mb-4">

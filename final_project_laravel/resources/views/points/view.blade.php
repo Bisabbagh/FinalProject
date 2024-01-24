@@ -14,12 +14,30 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
+            @if(session()->has('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+                </div>
+
+            @endif
+
+            @if(session()->has('del'))
+            <div class="alert alert-success">
+                {{ session('del') }}
+                </div>
+
+            @endif
+
+            
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+               
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>User_id</th>
                         <th>Points</th>
+                        <th>update</th>
+                        <th>Delete</th>
                         
                         
                     </tr>
@@ -42,8 +60,12 @@
         <a href="{{ route('editpoint',['point'=> $point])}}" class="btn btn-primary btn-sm">Edit</a></td>
         <td>
         <!-- Action buttons for each row -->
+        <form method="post" action="{{ route('deletepoints',['point'=> $point])}}">
+            @csrf
+            @method('delete')
         <button class="btn btn-danger btn-sm" >Delete</button>
-        </td>
+    </form>
+    </td>
         </tr>
         
                             

@@ -21,7 +21,17 @@ class PointController extends Controller
     public function edit(Point $point){
         
 
-        return view("points.editpoints");
+        return view("points.editpoints",['point'=>$point]);
+
+    }
+    public function update(Point $point, Request $request){
+        $data =$request->validate([
+            'user_id'=>['required','numeric'],
+            'point'=>['required','numeric']
+        ]);
+        $point->update($data);
+        return redirect(route('pointview'))->with('success','point update successfully');
+
 
     }
     public function store(Request $request){
@@ -32,6 +42,12 @@ class PointController extends Controller
         ]);
         $newPoints=Point::create($data);
         return redirect(route('pointview'));
+
+
+    }
+    public function delete(Point $point){
+        $point->delete();
+        return redirect(route('pointview'))->with('del','point delete successfully');
 
 
     }

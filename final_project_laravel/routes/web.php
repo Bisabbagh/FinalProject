@@ -22,9 +22,13 @@ Route::get('/', [TemplateController::class,'index'])->name('home');
 
 Route::get('/serves', [TemplateController::class,'serves'])->name('serves');
 Route::get('/lstsss', [TemplateController::class,'admin'])->name('admin');
+
 Route::get('/table', [TemplateController::class,'table'])->name('table');
 Route::get('/tablecp', [PointController::class,'create'])->name('createpoint');
 Route::get('/editpoint{point}', [PointController::class,'edit'])->name('editpoint');
+Route::put('/update{point}', [PointController::class,'update'])->name('updatepoints');
+Route::delete('/delete{point}', [PointController::class,'delete'])->name('deletepoints');
+
 Route::post('/points/view', [PointController::class,'store'])->name('storepoints');
 Route::get('/view', [PointController::class,'view'])->name('pointview');
 
