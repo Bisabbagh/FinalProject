@@ -10,7 +10,7 @@ class TemplateController extends Controller
         return view('home');
     }
     public function serves(){
-        return view('frontend.serves');
+        return view('serves');
     }
     public function admin(){
         return view('admindashboard');
