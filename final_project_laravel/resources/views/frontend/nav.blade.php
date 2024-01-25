@@ -11,13 +11,13 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-             <a class="nav-link active" href="index.html">Home</a>
+             <a class="nav-link active" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
              <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-             <a class="nav-link" href="services.html">Services</a>
+             <a class="nav-link" href="{{ route('serves') }}">Services</a>
           </li>
           <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

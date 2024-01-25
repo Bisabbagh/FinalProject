@@ -15,13 +15,26 @@ class ImageController extends Controller
     public function upload(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $image = $request->file('image');
-        $path = $image->store('images', 'public');
+        $imageName = time().'.'.$request->image->extension();
 
-        return redirect('/upload')->with('success', 'Image uploaded successfully.');
+        $request->image->storeAs('public/images/imageafter', $imageName);
+
+        return back()->with('success', 'Image uploaded successfully.');
+    }
+    public function upload2(Request $request)
+    {
+        $request->validate([
+            'image2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageName = time().'.'.$request->image2->extension();
+
+        $request->image2->storeAs('public/images/imagebefor', $imageName);
+
+        return back()->with('success', 'Image uploaded successfully.');
     }
 }
 

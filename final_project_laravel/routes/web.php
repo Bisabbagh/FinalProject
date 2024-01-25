@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PointController;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\ImageController;
 use App\Models\Point;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,10 @@ Route::delete('/delete{point}', [PointController::class,'delete'])->name('delete
 
 Route::post('/points/view', [PointController::class,'store'])->name('storepoints');
 Route::get('/view', [PointController::class,'view'])->name('pointview');
+
+
+Route::post('/upload-image', [ImageController::class, 'upload'])->name('upload.image');
+Route::post('/upload-image2', [ImageController::class, 'upload2'])->name('upload.image2');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
