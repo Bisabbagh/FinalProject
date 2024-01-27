@@ -104,7 +104,17 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('pointview') }}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Table points</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('users.all') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>user all</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('alltable') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Table all</span></a>
     </li>
 
     <!-- Divider -->

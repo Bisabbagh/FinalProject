@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PointController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\TAController;
+use App\Http\Controllers\PointsController;
+use App\Http\Controllers\UserController;
 use App\Models\Point;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +35,15 @@ Route::delete('/delete{point}', [PointController::class,'delete'])->name('delete
 
 Route::post('/points/view', [PointController::class,'store'])->name('storepoints');
 Route::get('/view', [PointController::class,'view'])->name('pointview');
+Route::get('/v', [TAController::class,'nammmmmm'])->name('alltable');
+
+
+Route::post('/add-points', [PointsController::class, 'addPoints'])->name('add-points');
+
+
+
+Route::resource('users', UserController::class);
+Route::get('/vv', [UserController::class, 'all'])->name('users.all');
 
 
 Route::post('/upload-image', [ImageController::class, 'upload'])->name('upload.image');
