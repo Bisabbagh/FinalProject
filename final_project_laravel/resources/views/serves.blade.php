@@ -36,7 +36,7 @@
 
 
                             <!-- Image Preview Container -->
-                            <div class="card-img-preview" id="previewContainer2">
+                            <div class="card-img-preview" id="previewContainer">
                                 
                             </div>
 							<div class="card-body">
@@ -47,16 +47,16 @@
 
 
                         <div class="card-footer">
-                            <form action="{{ route('upload.image2') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('upload.image') }}" method="post" enctype="multipart/form-data">
                                 @csrf
 
                                 <input type="file" name="image2" accept="image/*" id="imageInput2"
-                                    onchange="previewImage2()">
+                                    onchange="previewImage()">
                                 @error('image2')
                                     <div>{{ $message }}</div>
                                 @enderror
-                                <button class="btn btn-primary upload-button2" style="display:none">Upload Image</button>
-                            </form>
+								
+                            
                         </div>
 
                     </div>
@@ -78,17 +78,19 @@
                         </div>
 
                         <div class="card-footer">
-                            <form action="{{ route('upload.image') }}" method="post" enctype="multipart/form-data">
-                                @csrf
+                            
+                                
 
                                 <input type="file" name="image" accept="image/*" id="imageInput"
                                     onchange="previewImage()">
                                 @error('image')
                                     <div><h1>{{ $message }}</h1></div>
                                 @enderror
-                                <button class="btn btn-primary upload-button" style="display:none">Upload Image</button>
+								<button class="btn btn-primary upload-button" style="display:none">Upload Image</button>
                             </form>
+							
                         </div>
+						
                     </div>
                 </div>
 
@@ -102,16 +104,22 @@
     <script>
         function previewImage() {
             var input = document.getElementById('imageInput');
+			var input2 = document.getElementById('imageInput2');
             var preview = document.getElementById('previewContainer');
+			var preview2 = document.getElementById('previewContainer2');
             var file = input.files[0];
-            var uploadButton = document.querySelector('.upload-button');
+			var file2 = input2.files[0];
+			
+			
+			document.getElementById('selected-image').src = URL.createObjectURL(file);
+            document.getElementById('selected-image2').src = URL.createObjectURL(file2);
+			var uploadButton = document.querySelector('.upload-button');
 
-            if (file) {
-                preview.style.display = 'block';
-                document.getElementById('selected-image').src = URL.createObjectURL(file);
+            if (file&&file2) {
+               // preview.style.display = 'block';
                 uploadButton.style.display = 'block'; // Show the upload button
             } else {
-                preview.style.display = 'none';
+               // preview.style.display = 'none';
                 uploadButton.style.display = 'none'; // Hide the upload button if no file is selected
             }
         }
@@ -124,7 +132,7 @@
 
 
 
-		function previewImage2() {
+		/*function previewImage2() {
             var input = document.getElementById('imageInput2');
             var preview = document.getElementById('previewContainer2');
             var file = input.files[0];
@@ -143,7 +151,7 @@
         function uploadImage2() {
             // Implement your image upload logic here
             alert('Image upload logic goes here!');
-        }
+        }*/
     </script>
 
     <!-- /.container -->

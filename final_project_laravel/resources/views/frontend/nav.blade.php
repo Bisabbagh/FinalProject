@@ -29,6 +29,7 @@
                     <a href="{{ route('profile.edit') }}" class="nav-link dropdown-toggle">
                         Profile
                     </a>
+                    <br>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="btn btn-primary">
