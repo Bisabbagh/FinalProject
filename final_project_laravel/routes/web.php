@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TemplateController::class,'index'])->name('home');
 
+Route::post('/choose-gift/{giftId}', [TemplateController::class, 'chooseGift'])->name('choose.gift');
+
 Route::get('/serves', [TemplateController::class,'serves'])->name('serves');
 Route::get('/lstsss', [TemplateController::class,'admin'])->name('admin');
 

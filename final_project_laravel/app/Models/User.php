@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'all_point',
     ];
 
     /**
@@ -52,6 +53,6 @@ class User extends Authenticatable
     }
     public function gifts()
     {
-        return $this->belongsToMany(Gift::class);
+        return $this->belongsToMany(Gift::class, 'gift_user')->withTimestamps();
     }
 }

@@ -10,6 +10,6 @@ class Gift extends Model
     use HasFactory;
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'gift_user')->withTimestamps();
     }
 }
