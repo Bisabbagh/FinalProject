@@ -33,7 +33,8 @@
                         <tr>
                             <th>Id</th>
                             <th>User_id</th>
-                            <th>Points</th>
+                            <th>add point at </th>
+                            
                             <th>update</th>
                             <th>Delete</th>
 
@@ -50,7 +51,8 @@
                             <tr>
                                 <td>{{ $point->id }}</td>
                                 <td>{{ $point->user_id }}</td>
-                                <td>{{ $point->point }}</td>
+                                <td>{{ $point->created_at }}</td>
+                                
 
                                 <td>
                                     <!-- Action buttons for each row -->
