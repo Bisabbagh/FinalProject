@@ -7,8 +7,8 @@
                 <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                     has been the industry's standard dummy text ever since the 1500s</p>
                 <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
-                <p><i class="fa fa-phone"></i> +91-9999878398 </p>
-                <p><i class="fa fa fa-envelope"></i> info@example.com </p>
+                <p><i class="fa fa-phone"></i> 0730300263 </p>
+                <p><i class="fa fa fa-envelope"></i> bakeralsabbagh7.com </p>
             </div>
             
             <div class="col-lg-3 col-md-6 col-sm-6">
